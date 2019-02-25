@@ -68,9 +68,6 @@ aggregate(x[,names(x) != 'ID'],by=list(x$ID),length)
 aggregate(x[,names(x) != 'ID'],by=list(x$ID),head,n=1)
 aggregate(x[,names(x) != 'ID'],by=list(x$ID),tail,n=1)
 
-#If you're interested in other functions that achieve 
-#the same thing: http://www.r-bloggers.com/say-it-in-r-with-by-apply-and-friends/ 
-#(aggregate is among the best)
 
 #######################################################
 
@@ -95,9 +92,7 @@ aggregate(x[,names(x) != 'ID'],by=list(x$ID),tail,n=1)
 (y_by <- aggregate(y[,names(y) != 'ID'],
                    by=list(y$ID),sum))
 
-#You can name a column like this:
 names(y_by)[1] <- 'ID'
-#or you can list(ID=x$ID) as for x_by
 
 str(x_by)
 str(y_by)
